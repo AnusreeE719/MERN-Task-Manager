@@ -14,7 +14,7 @@ const CreateTask = () => {
     e.preventDefault();
     const data = {title, description};
     axios
-      .post('https://mern-task-manager-backend-yc9u.onrender.com/tasks', data)
+      .post('https://mern-task-manager-backend-zmaj.onrender.com/tasks', data)
       .then(() => {
         navigate('/');
       })

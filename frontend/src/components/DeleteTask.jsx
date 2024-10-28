@@ -10,7 +10,7 @@ const DeleteTask = () => {
 
   const handleDeleteTask = () => {
     axios
-      .delete(`https://mern-task-manager-backend-yc9u.onrender.com/tasks/${id}`)
+      .delete(`https://mern-task-manager-backend-zmaj.onrender.com/tasks/${id}`)
       .then(() => {
         navigate('/');
       })

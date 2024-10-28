@@ -13,7 +13,7 @@ const AllTasks = () => {
   
   useEffect(() => {
     axios
-      .get('https://mern-task-manager-backend-yc9u.onrender.com/tasks')
+      .get('https://mern-task-manager-backend-zmaj.onrender.com/tasks')
       .then((res) => {
         setTasks(res.data.data);
       })
@@ -26,7 +26,7 @@ const AllTasks = () => {
     const updatedStatus = !currentStatus;
     
        axios
-      .put(`https://mern-task-manager-backend-yc9u.onrender.com/tasks/${id}/status`, {
+      .put(`https://mern-task-manager-backend-zmaj.onrender.com/tasks/${id}/status`, {
         completed:updatedStatus,
       })
       .then(() => {
