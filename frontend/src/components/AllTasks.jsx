@@ -6,7 +6,6 @@ import {MdDelete} from 'react-icons/md'
 import {BsEye} from 'react-icons/bs'
 import {IoCheckmarkCircle} from 'react-icons/io5'
 import './Styles.css'
-//BsEyeSlash
 
 const AllTasks = () => {
 
@@ -14,7 +13,7 @@ const AllTasks = () => {
   
   useEffect(() => {
     axios
-      .get('http://localhost:5555/tasks')
+      .get('https://mern-task-manager-backend-yc9u.onrender.com/tasks')
       .then((res) => {
         setTasks(res.data.data);
       })
@@ -27,7 +26,7 @@ const AllTasks = () => {
     const updatedStatus = !currentStatus;
     
        axios
-      .put(`http://localhost:5555/tasks/${id}/status`, {
+      .put(`https://mern-task-manager-backend-yc9u.onrender.com/tasks/${id}/status`, {
         completed:updatedStatus,
       })
       .then(() => {

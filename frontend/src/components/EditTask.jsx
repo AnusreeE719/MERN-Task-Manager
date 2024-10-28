@@ -14,7 +14,7 @@ const EditTask = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/tasks/${id}`)
+      .get(`https://mern-task-manager-backend-yc9u.onrender.com/tasks/${id}`)
       .then((res) => {
         setTitle(res.data.title);
         setDescription(res.data.description);
@@ -28,7 +28,7 @@ const EditTask = () => {
     e.preventDefault(); 
     const data = {title, description};
     axios
-      .put(`http://localhost:5555/tasks/${id}`, data)
+      .put(`https://mern-task-manager-backend-yc9u.onrender.com/tasks/${id}`, data)
       .then(() =>{
         navigate('/');
       })

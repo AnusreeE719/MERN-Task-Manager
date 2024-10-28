@@ -15,7 +15,7 @@ const ViewTask = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/tasks/${id}`)
+      .get(`https://mern-task-manager-backend-yc9u.onrender.com/tasks/${id}`)
       .then((res) => {
         setcurrentTask(res.data);
       })
@@ -28,7 +28,7 @@ const ViewTask = () => {
     const updatedStatus = !currentTask.completed;
 
     axios
-      .put(`http://localhost:5555/tasks/${id}/status`, {
+      .put(`https://mern-task-manager-backend-yc9u.onrender.com/tasks/${id}/status`, {
         completed:updatedStatus,
       })
       .then(() => {
